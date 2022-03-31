@@ -21,13 +21,14 @@ body {
 
 .b {
   background-color: rgb(126, 159, 189);
-  flex-grow: 4;
+  flex-grow: 10;
 }
 
 .c, .d, .e {
   flex-direction: row;
+  flex-wrap: wrap;
   justify-content: space-between;
-  width: 33vh;
+  width: 20vh;
   min-height: 20vh;
   background-color: rgb(120, 153, 182);
 }
@@ -35,4 +36,27 @@ body {
 .f {
   background-color: rgb(77, 143, 206);
   flex-grow: 2;
+}
+
+@media (min-width: 800px) {
+  .container {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .a {
+    width: 100vh;
+    height: 33vh;
+  }
+  .b {
+    width: 66vh;
+    height: 33vh;
+  }
+  .c, .d, .e {
+    width: 25vh;
+    height: 33vh;
+  }
+  .f {
+    width: 24vh;
+    height: 66vh;
+  }
 }
